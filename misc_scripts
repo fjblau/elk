@@ -1,3 +1,7 @@
 kafka-avro-console-consumer --bootstrap-server localhost:9092 --property schema.registry.url=http://localhost:8081 --property print.key=true --from-beginning --topic mysql-foobar
 
+confluent load jdbc_source_mysql_foobar_01 -d ~/elk/kafka-connect-jdbc.json 
+confluent unload jdbc_source_mysql_foobar_01
+
+
 

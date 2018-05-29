@@ -1,0 +1,17 @@
+{
+        "name": "jdbc_source_mysql_foobar_01",
+        "config": {
+
+                "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+                "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+                "key.converter.schema.registry.url": "http://localhost:8081",
+                "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+                "value.converter.schema.registry.url": "http://localhost:8081",
+                "connection.url": "jdbc:mysql://localhost:3306/demo?user=rmoff&password=pw",
+                "table.whitelist": "foobar",
+                "mode": "timestamp",
+                "timestamp.column.name": "update_ts",
+                "validate.non.null": "false",
+                "topic.prefix": "mysql-"
+        }
+}
